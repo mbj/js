@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe JS::Node::If, '#js' do
-  let(:object) { JS::Node::If.new(condition, if_branch, else_branch) }
+  let(:object) { described_class.new(condition, if_branch, else_branch) }
 
   let(:condition) { JS.name_node('foo') }
 
