@@ -13,6 +13,30 @@ module JS
     this throw try typeof var void while
     with
   ).to_set)
+
+  # Return AQL node for literal
+  #
+  # @param [Object] value
+  #
+  # @return [AQL::Node::Literal]
+  #
+  # @api private
+  #
+  def self.literal_node(value)
+    Node::Literal.build(value)
+  end
+
+  # Return AQL name node
+  #
+  # @param [#to_s] name
+  #
+  # @return [AQL::Node::Name]
+  #
+  # @api private
+  #
+  def self.name_node(name)
+    Node::Name.new(name.to_s)
+  end
 end
 
 require 'js/buffer'
