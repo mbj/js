@@ -9,12 +9,12 @@ module JS
     #
     # @api private
     #
-    def javascript
+    def js
       emitter = Buffer.new
       emit(emitter)
       emitter.content
     end
-    memoize :javascript
+    memoize :js
 
     # Visit node
     #
