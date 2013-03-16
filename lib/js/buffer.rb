@@ -29,6 +29,20 @@ module JS
       end
     end
 
+    # Emit body 
+    #
+    # @param [Node] body
+    #
+    # @return [self]
+    #
+    # @api private
+    #
+    def body(body)
+      parentheses(' { ', ' }') do
+        body.visit(self)
+      end
+    end
+
     # Emit block in parentheses
     #
     # @return [self]

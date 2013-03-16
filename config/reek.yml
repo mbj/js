@@ -32,8 +32,9 @@ LongParameterList:
   overrides: {}
 FeatureEnvy:
   exclude: 
-  - JS::Node::Block#emit         # Definitive a false positive
-  - JS::Node::Call#for_argument? # Definitive a false positive
+  - JS::Node::Block#emit              # Definitive a false positive
+  - JS::Node::Function#emit_arguments # Definitive a false positive
+  - JS::Node::Call#for_argument?      # Definitive a false positive
   enabled: true
 ClassVariable:
   exclude: []
